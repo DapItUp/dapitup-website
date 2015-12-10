@@ -202,10 +202,33 @@ html, body {
 .mannequin {
 	max-width: 100%;
 	margin-right: 200px;
+	position: relative;
+	z-index: -999;
 	svg {
 /*		position: relative;
 		left: 100px; 
 */
+	}
+}
+
+.drop-boxes {
+	position: absolute;
+	top: -100px;
+	left: -25px;
+	>div {
+		width: 150px;
+		height: 150px;
+		background-color: rgba(109, 110, 112, 0.5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 20px;
+		font-size: 40px;
+		color: white;
+		font-family: $chelsea;
+	}
+	.bottom-drop {
+		font-size: 32px;
 	}
 }
 
@@ -222,7 +245,7 @@ html, body {
 	height: 0; 
 	border-top: 30px solid transparent;
 	border-bottom: 30px solid transparent;
-	border-right: 30px solid $dark-gray;
+	border-left: 30px solid $dark-gray;
 	margin-right: 30px;
 }
 
@@ -307,6 +330,7 @@ html, body {
 	margin-top: 40px;
 	text-align: center;
 	background-color: $black-gray;
+	z-index: 999;
 	img {
 		max-width: 100%;
 		max-height: 100%;
@@ -315,6 +339,15 @@ html, body {
 		color: white;
 		font-family: $chelsea;
 	}
+}
+
+.transform {
+	transform: scaleX(-1);
+}
+
+.top {
+	top: 75px;
+	z-index: 999;
 }
 
 /* Footer Styles */
