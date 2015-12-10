@@ -1,0 +1,381 @@
+/* Fonts */
+@font-face {
+  font-family: 'bebas_neue_regularregular';
+  src: url("fonts/bebasneue_regular-webfont.eot");
+  src: url("fonts/bebasneue_regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bebasneue_regular-webfont.woff2") format("woff2"), url("fonts/bebasneue_regular-webfont.woff") format("woff"), url("fonts/bebasneue_regular-webfont.ttf") format("truetype"), url("fonts/bebasneue_regular-webfont.svg#bebas_neue_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bisteccaregular';
+  src: url("fonts/bistecca-webfont.eot");
+  src: url("fonts/bistecca-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bistecca-webfont.woff2") format("woff2"), url("fonts/bistecca-webfont.woff") format("woff"), url("fonts/bistecca-webfont.ttf") format("truetype"), url("fonts/bistecca-webfont.svg#bisteccaregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'chelsearegular';
+  src: url("fonts/chelsea-webfont.eot");
+  src: url("fonts/chelsea-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/chelsea-webfont.woff2") format("woff2"), url("fonts/chelsea-webfont.woff") format("woff"), url("fonts/chelsea-webfont.ttf") format("truetype"), url("fonts/chelsea-webfont.svg#chelsearegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'intrique_script_personal_usRg';
+  src: url("fonts/intriquescript_personaluse-webfont.eot");
+  src: url("fonts/intriquescript_personaluse-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/intriquescript_personaluse-webfont.woff2") format("woff2"), url("fonts/intriquescript_personaluse-webfont.woff") format("woff"), url("fonts/intriquescript_personaluse-webfont.ttf") format("truetype"), url("fonts/intriquescript_personaluse-webfont.svg#intrique_script_personal_usRg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Colors */
+/* Global Declarations */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* Header Styles */
+.header-card {
+  height: calc(100vh - 50px);
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url("img/header-image.jpg");
+  background-repeat: no-repeat;
+  color: white; }
+  .header-card h1 {
+    font-family: "intrique_script_personal_usRg";
+    font-size: 200px;
+    margin: 0;
+    font-weight: normal; }
+  .header-card h2 {
+    font-family: "bebas_neue_regularregular";
+    font-size: 40px; }
+
+.gray-overlay {
+  background-color: rgba(186, 187, 192, 0.6);
+  min-width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.nav-wrap {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 30px; }
+  .nav-wrap a {
+    font-family: "bisteccaregular";
+    color: #808284;
+    font-size: 28px;
+    text-decoration: none; }
+    .nav-wrap a:first-child li {
+      border-right: 2px solid #808284;
+      padding-right: 8px; }
+    .nav-wrap a li {
+      display: inline-block;
+      padding: 5px; }
+
+.circle-position {
+  position: relative; }
+
+.circle-wrap {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 200px;
+  left: 170px; }
+
+.circle {
+  border-radius: 100px;
+  background-color: white;
+  min-width: 20px;
+  min-height: 20px;
+  display: inline-block;
+  margin: 35px; }
+
+/* Home Styles */
+.section-heading {
+  font-family: "bisteccaregular";
+  font-size: 30px;
+  font-weight: normal;
+  color: #808284;
+  border-bottom: 3px solid #808284;
+  display: block;
+  width: 160px;
+  margin-top: 0px;
+  padding-top: 50px; }
+
+.about-wrap {
+  margin: 0;
+  background-color: #F1F1F2; }
+  .about-wrap p {
+    font-size: 20px;
+    padding: 30px;
+    max-width: 60%;
+    margin: 0 auto; }
+  .about-wrap .inner-wrap {
+    max-width: 1250px;
+    margin: 0 auto;
+    font-family: "chelsearegular"; }
+
+.inner-wrap {
+  padding-bottom: 100px; }
+
+.contact-wrap {
+  max-width: 1250px;
+  margin: 0 auto;
+  font-family: "chelsearegular"; }
+  .contact-wrap form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .contact-wrap form .field-wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      border-bottom: 6px double #808284;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .contact-wrap form label {
+      font-family: "chelsearegular";
+      color: #808284;
+      font-weight: bold;
+      font-size: 30px; }
+    .contact-wrap form input {
+      border: none;
+      font-family: "chelsearegular";
+      font-size: 30px;
+      margin-left: 5px; }
+    .contact-wrap form .message-field {
+      background-color: #F1F1F2;
+      height: 200px;
+      min-width: 80%;
+      font-family: "chelsearegular";
+      font-size: 20px;
+      border: none;
+      margin-top: 20px; }
+    .contact-wrap form .submit-button {
+      max-width: 100px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 30px;
+      padding: 4px 10px; }
+
+/* App Styles */
+.app-wrap {
+  max-width: 100%; }
+  .app-wrap .page-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.app-nav {
+  background-color: #F1F1F2; }
+
+.app-title {
+  font-size: 60px;
+  font-family: "bisteccaregular";
+  color: #808284;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 0 0 30px; }
+
+.men-women-checkbox {
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50px; }
+  .men-women-checkbox label {
+    font-family: "chelsearegular";
+    color: #808284;
+    font-size: 30px;
+    padding-right: 30px; }
+
+.mannequin {
+  max-width: 100%;
+  margin-right: 200px; }
+  .mannequin svg {
+    /*		position: relative;
+    		left: 100px; 
+    */ }
+
+.shop-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden; }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #808284;
+  margin-right: 30px; }
+
+.shop-items {
+  width: 600px;
+  height: 400px;
+  background-color: #808284;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: relative; }
+
+.shop-category {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.shop-heading {
+  text-align: center;
+  min-width: 583px; }
+
+.bottoms {
+  display: none; }
+
+.shirts {
+  display: none; }
+
+.hats {
+  display: block; }
+
+.men {
+  display: none; }
+
+.women {
+  display: block; }
+
+.category-title {
+  color: white;
+  font-family: "chelsearegular";
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-right: 40px; }
+
+.shop-heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .shop-heading .triangle {
+    margin-top: 20px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #58585B; }
+
+.items-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  min-height: 100%; }
+
+.shop-item {
+  width: 150px;
+  height: 100px;
+  margin: 20px;
+  margin-top: 40px;
+  text-align: center;
+  background-color: #58585B; }
+  .shop-item img {
+    max-width: 100%;
+    max-height: 100%; }
+  .shop-item p {
+    color: white;
+    font-family: "chelsearegular"; }
+
+/* Footer Styles */
+footer {
+  height: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #F1F1F2;
+  color: #808284;
+  margin: 0; }
+  footer p {
+    padding-top: 25px;
+    font-family: "chelsearegular"; }
+
+/*# sourceMappingURL=style.css.map */
