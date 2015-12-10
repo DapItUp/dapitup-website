@@ -21,6 +21,23 @@ $('.toggle-items').click(function() {
 	}
 });
 
+//This code cycles through the shopping categories
+$('.to-shirts').click(function() {
+	$('.hats').hide();
+	$('.shirts').show();
+});
+
+$('.to-bottoms').click(function() {
+	$('.shirts').hide();
+	$('.bottoms').show();
+});
+
+$('.to-hats').click(function() {
+	$('.bottoms').hide();
+	$('.hats').show();
+});
+
+
 //This code is for the drag/drop system of the app
 
 // target elements with the "draggable" class
