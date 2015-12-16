@@ -14,7 +14,7 @@ var src = {
     ],
     base: [
         './src/**/*.*',
-        './src/.htaccess',
+        '!./src/**/*.scss',
         '!./src/*.html',
         '!./src/**/footer.php',
         '!./src/**/header.php',

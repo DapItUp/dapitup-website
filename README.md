@@ -71,6 +71,18 @@ gulp deploy
 ```
 And that will run your code to the repo you can set up!
 
+# Okay, that's great and all. But isn't this a bit overcomplicated?
+Well, yes. It is complicated and it does add complexity to your build process. But, hear me out, this is a streamlined system many companies (including my own) use to manage our applications. So using this would basically make you do these steps.
+
+* Start development (run `gulp`)
+* Finish everything!
+* Commit changes to `dapitup-website`
+* Re-run gulp with the fancy `--p` argument (`gulp --p`)
+* Deploy your `dist` folder to your other repository (`gulp deploy`)
+* Done!
+
+That is it, everything else is managed for you. Simple as that.
+
 
 # Final Thoughts?
 ![My image](https://media.giphy.com/media/9MNH93c2V3O24/giphy.gif)
