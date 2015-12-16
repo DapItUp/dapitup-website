@@ -180,7 +180,7 @@ Run `gulp --p` and that will minify all your assets (do this always before you r
 # Okay, I pushed everything up but all it did was create a branch of `gh-pages`. Why?!?
 This is what deploy does, it doesn't commit to your master by any means. That would be quite bad if you pushed up bad code. You have to manually handle it from here. I use SourceTree to manage the repositories.
 
-What you have to do is go into your WEBSITE repo via SourceTree, you'll see a weird commit there on another branch.
+What you have to do is go into your WEBSITE repo via SourceTree, you'll see a weird commit there on another branch. (Under the sidebar, `REMOTES`, gh-pages)
 Right Click it, push it up to master and you're done. Your changes are now in the master branch. All is well!
 
 # Final Thoughts?
