@@ -1,0 +1,20 @@
+{
+  "name": "DapItUp",
+  "description": "DapItUp Website",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "dapitup.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.3",
+    "interact": "~1.2.6"
+  }
+}
