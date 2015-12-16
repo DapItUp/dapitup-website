@@ -14,7 +14,7 @@ module.exports = inject;
 // -------------------------------------
 function inject(gulp, $, pkg, argv) {
     return function () {
-        return gulp.src('./src/*.html')
+        return gulp.src('./src/**/*.html')
             .pipe($.inject(
                 gulp.src('./dist/assets/js/*.js'), {
                     addRootSlash: true,
