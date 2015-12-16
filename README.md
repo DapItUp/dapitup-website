@@ -6,6 +6,13 @@ This is just to overview what the build system is doing and how it works, kind o
 Essentially it is using a build system called Gulp (which is a NodeJS plugin) that manages tasks that your app can do.
 ---
 
+# What tech are we using here?
+* [NodeJS](https://nodejs.org/en/)
+* [Gulp](http://gulpjs.com/)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Browsersync](https://www.browsersync.io/)
+---
+
 # How do I get it to work?
 Well... This is the fun part.
 You need to make sure you have [NodeJS](https://nodejs.org/en/), Ruby (default on Mac) & its bundles installed.
@@ -71,8 +78,11 @@ gulp deploy
 ```
 And that will run your code to the repo you can set up!
 
-# Okay, that's great and all. But isn't this a bit overcomplicated?
-Well, yes. It is complicated and it does add complexity to your build process. But, hear me out, this is a streamlined system many companies (including my own) use to manage our applications. So using this would basically make you do these steps.
+# Okay, that's great and all. But... Why?
+You're probably thinking to yourself.
+![omg](https://media.giphy.com/media/1LgB3PLIC01AA/giphy.gif)
+
+Which I don't blame you. It is complicated and it does add complexity to your build process. But, hear me out, this is a streamlined system many companies (including my own) use to manage our applications. So using this would basically make you do these steps.
 
 * Start development (run `gulp`)
 * Finish everything!
@@ -82,7 +92,98 @@ Well, yes. It is complicated and it does add complexity to your build process. B
 * Done!
 
 That is it, everything else is managed for you. Simple as that.
+* SCSS - Compiled
+* JS - Cleaned up to your liking
+* Injections and managing files? - Gulp-Inject handles that for you
+* Adding packages???? - Forgot about that.
 
+# Adding Package
+So under the scary `gulp-tasks` file you should see a `scripts.js` folder that looks a bit like this:
+```
+/**
+ * Scripts Task
+ * -------------------------------------
+ *
+ * @description
+ * This manages all of our JS scripts we are including.
+ */
+
+// Modules
+// -------------------------------------
+
+// Includes
+// -------------------------------------
+var js = {
+    libs: [
+        // Libraries
+        './bower_components/jquery/dist/jquery.js',
+        './src/**/*.js'
+    ]
+};
+
+
+// Exports
+// -------------------------------------
+module.exports = {
+    app: app,
+    files: js
+};
+
+// App Fn
+// -------------------------------------
+function app(gulp, $, pkg, argv) {
+    return function () {
+        var production = argv.production || argv.p;
+        var development = argv.development || argv.dev;
+
+        // Application
+        return gulp.src(js.libs)
+            .pipe($.if(production, $.uglify()))
+            .pipe($.concat('dapitup-' + pkg.version + '.js'))
+            .pipe(gulp.dest('./dist/assets/js/'));
+    }
+}
+
+```
+
+What is this? Its just a bunch of code??
+Yes, it is. That is what runs it. If you wanted to add a package to your code you would do so like this:
+```
+bower install PACKAGE_NAME --save
+```
+
+Or if you're unlucky and have to run everything with sudo because you get a `EPERM` or `EACCESS` error.
+```
+sudo bower install PACKAGE_NAME --save --allow-root
+```
+
+After that your would go to `js` variable and add a new file like so:
+(Here we will add the `interact` package, sudo is in brackets just in case you need it.)
+```
+[sudo] bower install interact --save [--allow-root]
+```
+Then in `scripts.js`
+```
+var js = {
+    libs: [
+        // Libraries
+        './bower_components/jquery/dist/jquery.js',
+        './bower_components/interact/dist/interact.js',
+        './src/**/*.js'
+    ]
+};
+```
+
+# But I want minified!!1!11!!
+Run `gulp --p` and that will minify all your assets (do this always before you run `gulp deploy`)
+
+# Okay, I pushed everything up but all it did was create a branch of `gh-pages`. Why?!?
+This is what deploy does, it doesn't commit to your master by any means. That would be quite bad if you pushed up bad code. You have to manually handle it from here. I use SourceTree to manage the repositories.
+
+What you have to do is go into your WEBSITE repo via SourceTree, you'll see a weird commit there on another branch.
+Right Click it, push it up to master and you're done. Your changes are now in the master branch. All is well!
 
 # Final Thoughts?
-![My image](https://media.giphy.com/media/9MNH93c2V3O24/giphy.gif)
+![tenouttaten](https://media.giphy.com/media/9MNH93c2V3O24/giphy.gif)
+
+Of course, if you have any questions. You can text me, I don't have any problem with helping you guys out! Just thought this would be a good way of introducing you guys to some crazy cool systems.

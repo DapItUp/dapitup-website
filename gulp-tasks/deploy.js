@@ -1,7 +1,3 @@
-
-
-gulp.task('deploy', function () {
-
 /**
  * Deploy Task
  * -------------------------------------
@@ -12,19 +8,19 @@ gulp.task('deploy', function () {
 
 // Modules
 // -------------------------------------
+var deploy = require('gulp-gh-pages');
 
 // Exports
 // -------------------------------------
-module.exports = {
-    deploy: deploy
-};
+// module.exports = deploy;
 
 // Clean Fn
 // -------------------------------------
-function deploy(gulp, $, pkg, argv) {
+module.exports = function(gulp, $, pkg, argv) {
     return function() {
         return gulp.src('./dist/**/*')
-          .pipe($.gulpGhPages())
-      });
+          .pipe(deploy({
+              remoteUrl: 'https://github.com/mikehuebner/dapitup.github.io.git'
+          }));
     }
 }

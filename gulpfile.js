@@ -62,6 +62,9 @@ gulp.task('inject', req('inject'));
 // Server
 gulp.task('server', req('server'));
 
+// Deploy
+gulp.task('deploy', req('deploy'));
+
 
 // -------------------------------------
 // Sequence
