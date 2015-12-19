@@ -3,5 +3,5 @@ dist
 bower_components
 .DS_Store
 db.thumbs
-Gemfile.lock
 .sass-cache
+.publish
