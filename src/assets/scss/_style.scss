@@ -38,6 +38,10 @@ body {
     justify-content: center;
 }
 
+.touched {
+    display: block !important;
+}
+
 .nav-wrap {
     padding-top: 15px;
     padding-bottom: 10px;
@@ -147,6 +151,7 @@ body {
             font-family: $chelsea;
             font-size: 30px;
             margin-left: 5px;
+            outline: 0;
         }
 
         .message-field {
@@ -157,6 +162,8 @@ body {
             font-size: 20px;
             border: none;
             margin-top: 20px;
+            outline: 0;
+            padding: 5px;
         }
 
         .submit-button {
@@ -263,8 +270,8 @@ body {
     width: 600px;
     height: 400px;
     background-color: $dark-gray;
-    overflow: scroll;
-    overflow-x: hidden;
+    // overflow: scroll;
+    // overflow-x: hidden;
     position: relative;
 }
 
@@ -280,15 +287,15 @@ body {
 }
 
 .bottoms {
-    display: none;
+    visibility: hidden;
 }
 
 .shirts {
-    display: none;
+    visibility: hidden;
 }
 
 .hats {
-    display: block;
+    visibility: visible;
 }
 
 .men {
